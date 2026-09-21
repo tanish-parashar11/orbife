@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Orbife",
+    "slug": "orbife",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "orbife",
+    "android": { "package": "com.orbife.app" },
+    "ios": { "bundleIdentifier": "com.orbife.app" },
+    "web": { "bundler": "metro" }
+  }
+}

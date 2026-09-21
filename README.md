@@ -5,6 +5,7 @@ Orbife is a social learning network concept for college communities: an X-inspir
 ## What is included
 
 - Dark, responsive feed UI inspired by the supplied reference screenshot.
+- A native-style Expo React Native client under `mobile/`, including the supplied dark onboarding direction and five bottom tabs: Home, Explore, Hubs, Alerts, and Messages.
 - **Global activity timeline** with For You / Following tabs, post composer, media card, likes, reposts, saves, and federated timeline indicator.
 - **Headless college hubs** for Mathematics, Coding Lab, and Public Speaking with suggested hub cards and channel counts.
 - **Test-to-enter gatekeeper** with a five-question skill quiz shell. The example gate uses an 80% pass rule and unlocks the hub on success.
@@ -14,6 +15,7 @@ Orbife is a social learning network concept for college communities: an X-inspir
 ## Stack
 
 - React 19, TypeScript, Vite, Tailwind CSS, shadcn/ui primitives, Wouter
+- Expo React Native 0.81 mobile client with a native dark surface, press feedback, bottom navigation, compose sheet, and skill-gate sheet
 - Express + tRPC + Drizzle foundation from the WebDev full-stack scaffold
 - Vitest for server/shared unit tests
 - Lucide icons and CSS-first motion system
@@ -54,3 +56,7 @@ Populate the following variables only in your deployment secret manager or local
 ## Design notes
 
 The visual language intentionally stays close to the supplied dark social app reference while differentiating Orbife with an orbital wordmark, blue/cyan interaction states, soft protocol accents, and compact monospace metadata for federation and hub context.
+
+## Mobile client note
+
+The current environment provides Expo/React Native rather than a Flutter SDK. The production-ready mobile shell is therefore implemented in `mobile/` with a clean separation from the web client. The backend contracts remain client-agnostic, so a Flutter client can replace the Expo surface later without changing the Supabase, ActivityPub, hub, or Matrix integration boundaries.
